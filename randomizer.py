@@ -197,7 +197,7 @@ class Window(Frame):
                               command=lambda: self.fulllist(labels, buttons))
         self.ByGenre.pack()
         self.close_button = Button(self, font=("Helvetica 10 "), borderwidth = 0,width=14,
-                           height=2,bg = "black",fg = "white", text="Close", command=lambda: exit())
+                           height=2,bg = "black",fg = "white", text="Close", command=lambda: sys.exit())
         self.close_button.pack()
         #self.label = Label(self, bg="white", text="\n")
         self.label.pack()
@@ -330,7 +330,7 @@ def getFileName():
         initialdir="/", title="Select file", filetypes=(("csv files", "*.csv"), ("all files", "*.*")))
     filename1 = root.filename
     if filename1 == '':
-        exit()
+        sys.exit()
     else:
         root.destroy()
     
