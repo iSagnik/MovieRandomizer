@@ -7,6 +7,7 @@ from tkinter import Tk, Label, Button, BOTH, Frame, filedialog
 from os import sys
 import os
 import argparse
+
 def getRowCount(reader):
     theRow = ''
     rowCount = 0
@@ -18,13 +19,11 @@ def getRowCount(reader):
             break
     return rowCount
 
-
 def getColCount(reader):
     theCol = 0
     for row in reader:
         theCol = len(row) - 1
     return theCol
-
 
 #movieArray = ["Comedy", "Thriller", "Action", "Rom-Com", "Drama", "Critically Acclaimed",
 #              "MindFuck", "Fantasy/Sci Fi", "Animated", "Mystery", "Biopic", "B-Romantic/drama", "BollyFeels", "B-Action/Thriller", "B-Biopics", "B-Critically Acclaimed", "B-Comedy"]
@@ -42,7 +41,6 @@ def getFile(fileName2):
     f.close()
     reader = csv.reader(StringIO(datafiletemp))
     return reader
-
 
 def getMovie(num, option):
     reader = getFile(fileName)
@@ -66,7 +64,6 @@ def getMovie(num, option):
             movie = random.choice(content)
     return movie
 
-
 '''
 def selectMovie(col, movie):
     reader = getFile(fileName)
@@ -84,7 +81,6 @@ def selectMovie(col, movie):
     exit()
 '''
 
-
 def getList():
     i = 1
     txt = ''
@@ -92,7 +88,6 @@ def getList():
         txt = txt + f'{i}. {genre}\n'
         i += 1
     return txt
-
 
 class Backend:
 
@@ -182,7 +177,6 @@ def gui():
     _app = Window(root)
     root.mainloop()
     root.destroy()
-
 
 class Window(Frame):
     def __init__(self, master=None):
