@@ -1,6 +1,4 @@
 # MovieRandomizer
-<br>
-<br>
 Python Executable File:
 <br>
 <b>randomizer.exe </b>
